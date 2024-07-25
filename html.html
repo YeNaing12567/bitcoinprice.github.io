@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crypto Price Prediction</title>
+</head>
+<body>
+    <h1>Crypto Price Prediction</h1>
+    <div id="results"></div>
+    <script>
+        fetch('/api/predict')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('results').innerText = JSON.stringify(data);
+            });
+    </script>
+</body>
+</html>
